@@ -99,6 +99,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -128,6 +129,29 @@
         .event-content p:hover {
             color: #7D3C98; /* Glowing effect for paragraph text */
             text-shadow: 0 0 10px #7D3C98, 0 0 15px #7D3C98; /* Glowing effect on hover */
+        }
+
+        .register-button {
+            display: none;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #7D3C98;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .register-button:hover {
+            background-color: #6b2d77;
+        }
+
+        .event-item:hover .register-button,
+        .event-item:focus-within .register-button {
+            display: block;
         }
 
         /* Footer */
@@ -173,11 +197,8 @@
             <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
                     <li><a href="#events">Events</a></li>
-                    <li><a href="#schedule">Schedule</a></li>
                     <li><a href="#registration">Registration</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
@@ -195,112 +216,123 @@
                 <div class="events-list">
                     <div class="event-item" data-aos="fade-up">
                         <div class="event-header">
-                            <h3>Techiplore (PPT)</h3>
+                            <h3>Tech Talk</h3>
                         </div>
                         <div class="event-content">
-                            <p>Showcase your technical knowledge and presentation skills. Present groundbreaking ideas and innovations!</p>
+                            <p>Engage with industry experts and learn about the latest trends in technology.</p>
                         </div>
+                        <button class="register-button">Register</button>
                     </div>
                     <div class="event-item" data-aos="fade-up">
                         <div class="event-header">
-                            <h3>Coding Challenge</h3>
+                            <h3>Hackathon</h3>
                         </div>
                         <div class="event-content">
-                            <p>Participate in an intense coding competition. Solve real-world problems and stand out as a top coder.</p>
+                            <p>Join teams and compete to solve real-world problems in a high-pressure environment.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Non-Technical Events -->
-            <div class="event-category">
-                <h3 class="event-category-title">Non-Technical Events</h3>
-                <div class="events-list">
-                    <div class="event-item" data-aos="fade-up">
-                        <div class="event-header">
-                            <h3>Debate Competition</h3>
-                        </div>
-                        <div class="event-content">
-                            <p>Engage in intellectual discussions and debates. Share your opinions on contemporary topics.</p>
-                        </div>
+                        <button class="register-button">Register</button>
                     </div>
                     <div class="event-item" data-aos="fade-up">
                         <div class="event-header">
-                            <h3>Quiz Competition</h3>
+                            <h3>Robotics Workshop</h3>
                         </div>
                         <div class="event-content">
-                            <p>Test your general knowledge and trivia in this exciting quiz competition.</p>
+                            <p>Hands-on experience with building and programming robots.</p>
                         </div>
+                        <button class="register-button">Register</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Crazy Games -->
+            <!-- Cultural Events -->
             <div class="event-category">
-                <h3 class="event-category-title">Crazy Games</h3>
+                <h3 class="event-category-title">Cultural Events</h3>
                 <div class="events-list">
                     <div class="event-item" data-aos="fade-up">
                         <div class="event-header">
-                            <h3>Balloon Game</h3>
+                            <h3>Dance Competition</h3>
                         </div>
                         <div class="event-content">
-                            <p>Join the fun in the balloon game and compete with others to finish rounds in the shortest time!</p>
+                            <p>Show off your dancing skills and compete for exciting prizes.</p>
                         </div>
+                        <button class="register-button">Register</button>
                     </div>
                     <div class="event-item" data-aos="fade-up">
                         <div class="event-header">
-                            <h3>Tug of War</h3>
+                            <h3>Music Fest</h3>
                         </div>
                         <div class="event-content">
-                            <p>Compete in this exciting test of strength and teamwork! Victory awaits the strongest team.</p>
+                            <p>Enjoy live performances by talented artists and bands.</p>
                         </div>
+                        <button class="register-button">Register</button>
+                    </div>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Art Exhibition</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>Explore creative artworks by students and local artists.</p>
+                        </div>
+                        <button class="register-button">Register</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Online Games -->
+            <!-- Fun Events -->
             <div class="event-category">
-                <h3 class="event-category-title">Online Games</h3>
+                <h3 class="event-category-title">Fun Events</h3>
                 <div class="events-list">
                     <div class="event-item" data-aos="fade-up">
                         <div class="event-header">
-                            <h3>PUBG Tournament</h3>
+                            <h3>Trivia Quiz</h3>
                         </div>
                         <div class="event-content">
-                            <p>Compete in the ultimate battle royale challenge and emerge as the PUBG champion!</p>
+                            <p>Test your knowledge and win exciting prizes in our trivia quiz.</p>
                         </div>
+                        <button class="register-button">Register</button>
                     </div>
                     <div class="event-item" data-aos="fade-up">
                         <div class="event-header">
-                            <h3>FIFA Tournament</h3>
+                            <h3>Fashion Show</h3>
                         </div>
                         <div class="event-content">
-                            <p>Show off your football skills in this exciting online FIFA tournament.</p>
+                            <p>Showcase your fashion sense and creativity on the runway.</p>
                         </div>
+                        <button class="register-button">Register</button>
+                    </div>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Food Fest</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>Enjoy a variety of delicious foods from different cuisines.</p>
+                        </div>
+                        <button class="register-button">Register</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <ul class="social-media">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-            <p>&copy; 2024 AVIRBHAV Event | All rights reserved.</p>
+            <div class="social-media">
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <p>&copy; 2024 AVIRBHAV. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- AOS (Animate on Scroll) JS -->
+    <!-- AOS (Animate on Scroll) JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000
-        });
+        AOS.init();
     </script>
 </body>
 </html>
