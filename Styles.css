@@ -366,3 +366,17 @@ body {
         padding: 10px; /* Keep consistent padding */
     }
 }
+/* AIML Dept Text */
+#aiml-dept-text {
+    font-size: 0.6em; /* Reduced size */
+    color: #66fcf1;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    transition: box-shadow 0.3s, color 0.3s;
+}
+
+#aiml-dept-text:hover {
+    color: #00bfa5;
+    box-shadow: 0 0 15px rgba(0, 191, 165, 0.8); /* Glowing effect */
+}
