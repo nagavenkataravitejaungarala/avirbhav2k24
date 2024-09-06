@@ -23,36 +23,34 @@
         }
 
         /* Header */
-       /* Header */
-.header {
-    background-color: #111;
-    padding: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    position: sticky;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the content horizontally */
-}
+        .header {
+            background-color: #111;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the content horizontally */
+        }
 
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.logo img {
-    max-height: 50px;
-}
+        .logo img {
+            max-height: 50px;
+        }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-
 
         .navbar ul {
             list-style-type: none;
@@ -166,18 +164,31 @@
     <!-- Main Heading -->
     <h1>Event Coordinators</h1>
 
-    <!-- Coordinator Section -->
+    <!-- Main Coordinator Section -->
+    <div class="container coordinator-section">
+        <!-- Main Coordinator -->
+        <div class="sub-category" onclick="toggleList('main-coordinator-list')">
+            <h2>Main Coordinators</h2>
+            <div id="main-coordinator-list" class="coordinator-list">
+                <p>Main Coordinator 1: U.N.V.RAVI TEJA <br><span>Phone: +91 7013666788</span></p>
+                <p>Main Coordinator 2: G.KARTHIK BHASKAR <br><span>Phone: +91 8099963336</span></p>
+                <p>Main Coordinator 3: L.MEGHA SYAM <br><span>Phone: +91 9573304843</span></p>
+                <p>Main Coordinator 4: KUMAR RUDRA <br><span>Phone: +91 9063360596</span></p>
+                <p>Main Coordinator 5: KOUSHIK <br><span>Phone: +91 XXXXXXXXXX</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coordinator Sections -->
     <div class="container coordinator-section">
         <!-- Sub-category 1 -->
         <div class="sub-category" onclick="toggleList('list1')">
             <h2>Tech Showdowns</h2>
             <div id="list1" class="coordinator-list">
-                <p>Coordinator 1: PRANEETH VASA <br><span>Phone:+91 8328571819</span></p>
+                <p>Coordinator 1: V.P.PRANEETH <br><span>Phone:+91 8328571819</span></p>
                 <p>Coordinator 2: K.NEERAJA <br><span>Phone: +91 8106990656</span></p>
                 <p>Coordinator 3: M.JYOTHI<br><span>Phone: +91 9381131378</span></p>
                 <p>Coordinator 4: LIKITH <br><span>Phone: +91 7893789031</span></p>
-                <!-- <p>Coordinator 2: Jane Smith <br><span>Phone: +123 456 7891</span></p>
-                <p>Coordinator 3: Alice Brown <br><span>Phone: +123 456 7892</span></p> -->
             </div>
         </div>
 
@@ -189,34 +200,32 @@
                 <p>Coordinator 2: P.VINAY <br><span>Phone: +91 9642324495</span></p>
                 <p>Coordinator 3: B.CHANDRIKA <br><span>Phone: +91 7680966610</span></p>
                 <p>Coordinator 4: RAKESH <br><span>Phone: +123 456 7890</span></p>
-                <p>Coordinator 2: K.JHANAVI <br><span>Phone: +91 9347981850</span></p>
-                
+                <p>Coordinator 5: K.JHANAVI <br><span>Phone: +91 9347981850</span></p>
             </div>
         </div>
 
         <!-- Sub-category 3 -->
         <div class="sub-category" onclick="toggleList('list3')">
-            <h2>Game zone</h2>
+            <h2>Game Zone</h2>
             <div id="list3" class="coordinator-list">
-                <p>Coordinator 1: E.JEJI ANIL KUMAR <br><span>Phone: +91 9642324495</span></p>
+                <p>Coordinator 1: E.JEJI ANIL  <br><span>Phone: +91 9642324495</span></p>
                 <p>Coordinator 2: K.VAMSI <br><span>Phone: +91 9849277879</span></p>
                 <p>Coordinator 3: B.VIJAYA<br><span>Phone: +91 7036348948</span></p>
                 <p>Coordinator 4: PRASAD <br><span>Phone: +91 7981017915</span></p>
                 <p>Coordinator 5: MALLI KARJUN <br><span>Phone: +91 9666453219</span></p>
-                
+                <p>Coordinator 6: K.C.V.GOPI KRISHNA <br><span>Phone: +91 9392796088</span></p>
             </div>
         </div>
 
         <!-- Sub-category 4 -->
         <div class="sub-category" onclick="toggleList('list4')">
-            <h2>CULTURALS</h2>
+            <h2>Cultural Coordinators</h2>
             <div id="list4" class="coordinator-list">
                 <p>Coordinator 1: K.BHANU TEJA <br><span>Phone: +91 9502647676</span></p>
                 <p>Coordinator 2: V.S.C.YESAWINI<br><span>Phone: +91 7989193698</span></p>
                 <p>Coordinator 3: M.S.R.CHANDRIKA <br><span>Phone: +91 9642416755</span></p>
-                <p>Coordinator 4:A.HEMANTH <br><span>Phone: +91 9032837064 </span></p>
-                <p>Coordinator 5:K.SWARNA<br><span>Phone: +91 7207448350</span></p>
-               
+                <p>Coordinator 4: A.HEMANTH <br><span>Phone: +91 9032837064</span></p>
+                <p>Coordinator 5: K.SWARNA<br><span>Phone: +91 7207448350</span></p>
             </div>
         </div>
     </div>
@@ -227,9 +236,21 @@
     </div>
 
     <script>
+        let currentlyOpen = null;
+
         function toggleList(id) {
             const list = document.getElementById(id);
+
+            // Close the currently open box if it's not the one being clicked
+            if (currentlyOpen && currentlyOpen !== list) {
+                currentlyOpen.style.display = 'none';
+            }
+
+            // Toggle the clicked box
             list.style.display = list.style.display === 'none' || list.style.display === '' ? 'block' : 'none';
+
+            // Update the currently open box
+            currentlyOpen = list.style.display === 'block' ? list : null;
         }
     </script>
 </body>
