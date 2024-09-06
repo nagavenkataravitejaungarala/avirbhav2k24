@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <!-- Custom CSS -->
     <style>
-       body {
+        body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
@@ -28,13 +28,15 @@
             padding: 20px 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             position: sticky;
+            width: 100%;
             top: 0;
             z-index: 1000;
         }
 
         .container {
-            width: 85%;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
         }
 
         .logo img {
@@ -61,57 +63,61 @@
             color: #7D3C98;
         }
 
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-
         h1 {
             font-size: 2.5rem;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             color: #2c3e50;
+            text-align: center;
         }
 
-        .contact-details {
+        .coordinator-section {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
             gap: 20px;
+            justify-content: center;
         }
 
-        .contact-box {
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .sub-category {
+            background-color: #1a1a1a;
+            padding: 15px;
             border-radius: 8px;
-            padding: 20px;
-            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 280px;
             text-align: center;
-            transition: transform 0.3s;
+            cursor: pointer;
         }
 
-        .contact-box:hover {
+        .sub-category:hover {
             transform: translateY(-5px);
+            box-shadow: 0 0 15px 5px rgba(123, 58, 183, 0.6); /* Glowing effect */
         }
 
-        .contact-box h2 {
+        .sub-category:active {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px 10px rgba(123, 58, 183, 0.8); /* Glowing effect on touch */
+        }
+
+        .sub-category h2 {
             font-size: 1.5rem;
             color: #1abc9c;
-            margin-bottom: 10px;
+            margin: 0 0 10px;
         }
 
-        .contact-box p {
+        .coordinator-list {
+            display: none; /* Initially hidden */
+            padding: 10px 0;
+        }
+
+        .coordinator-list p {
             font-size: 1rem;
+            color: #fff;
             margin: 5px 0;
-            color: #555;
         }
 
-        .contact-box a {
-            text-decoration: none;
-            color: #2980b9;
-            font-weight: bold;
+        .coordinator-list span {
+            font-size: 0.9rem;
+            color: #ccc;
         }
 
         .footer {
@@ -122,35 +128,98 @@
         }
 
         @media (max-width: 768px) {
-            .contact-box {
-                width: 80%;
+            .sub-category {
+                width: 90%;
+                margin: 10px 0;
             }
         }
-        
     </style>
-    </head>
-    <body>
-        <!-- Header Section -->
-        <header class="header">
-            <div class="container">
-                <div class="logo">
-                    <img src="aiml_logo.png" alt="College Logo">
-                </div>
-                <nav class="navbar">
-                    <ul class="nav-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="events.html">Events</a></li>
-                       
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </nav>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="aiml_logo.png" alt="College Logo">
             </div>
-        </header>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <div class="footer">
-            © Avirbhav-2k24 | All rights reserved.
+    <!-- Main Heading -->
+    <h1>Event Coordinators</h1>
+
+    <!-- Coordinator Section -->
+    <div class="container coordinator-section">
+        <!-- Sub-category 1 -->
+        <div class="sub-category" onclick="toggleList('list1')">
+            <h2>Tech Showdowns</h2>
+            <div id="list1" class="coordinator-list">
+                <p>Coordinator 1: V.P.PRANEETH <br><span>Phone:+91 8328571819</span></p>
+                <p>Coordinator 2: K.NEERAJA <br><span>Phone: +91 8106990656</span></p>
+                <p>Coordinator 3: M.JYOTHI<br><span>Phone: +91 9381131378</span></p>
+                <p>Coordinator 4: LIKITH <br><span>Phone: +91 7893789031</span></p>
+                <!-- <p>Coordinator 2: Jane Smith <br><span>Phone: +123 456 7891</span></p>
+                <p>Coordinator 3: Alice Brown <br><span>Phone: +123 456 7892</span></p> -->
+            </div>
+        </div>
+
+        <!-- Sub-category 2 -->
+        <div class="sub-category" onclick="toggleList('list2')">
+            <h2>Chill Zone</h2>
+            <div id="list2" class="coordinator-list">
+                <p>Coordinator 1: DURGA PRASAD <br><span>Phone: +91 9553950479</span></p>
+                <p>Coordinator 2: P.VINAY <br><span>Phone: +91 9642324495</span></p>
+                <p>Coordinator 3: B.CHANDRIKA <br><span>Phone: +123 456 7895</span></p>
+                <p>Coordinator 1: RAKESH <br><span>Phone: +123 456 7890</span></p>
+                <p>Coordinator 2: Jane Smith <br><span>Phone: +123 456 7891</span></p>
+                <p>Coordinator 3: Alice Brown <br><span>Phone: +123 456 7892</span></p>
+            </div>
+        </div>
+
+        <!-- Sub-category 3 -->
+        <div class="sub-category" onclick="toggleList('list3')">
+            <h2>Game zone</h2>
+            <div id="list3" class="coordinator-list">
+                <p>Coordinator 1: E.JEJI ANIL KUMAR <br><span>Phone: +91 9642324495</span></p>
+                <p>Coordinator 2: K.VAMSI <br><span>Phone: +91 9849277879</span></p>
+                <p>Coordinator 3: B.VIJAYA<br><span>Phone: +123 456 7898</span></p>
+                <p>Coordinator 4: PRASAD <br><span>Phone: +91 7981017915</span></p>
+                <p>Coordinator 5: MALLI KARJUN <br><span>Phone: +91 9666453219</span></p>
+                <p>Coordinator 6: Alice Brown <br><span>Phone: +123 456 7892</span></p>
+            </div>
+        </div>
+
+        <!-- Sub-category 4 -->
+        <div class="sub-category" onclick="toggleList('list4')">
+            <h2>CULTURAL CO-ORDINATERS</h2>
+            <div id="list4" class="coordinator-list">
+                <p>Coordinator 1: K.BHANU TEJA <br><span>Phone: +91 9502647676</span></p>
+                <p>Coordinator 2: V.S.C.YESAWINI<br><span>Phone: +91 7989193698</span></p>
+                <p>Coordinator 3: M.S.R.CHANDRIKA <br><span>Phone: +91 9642416755</span></p>
+                <p>Coordinator 4:A.HEMANTH <br><span>Phone: +91 9032837064 </span></p>
+                <p>Coordinator 5:K.SWARNA<br><span>Phone: +123 456 7891</span></p>
+                <p>Coordinator 3: Alice Brown <br><span>Phone: +123 456 7892</span></p>
+            </div>
         </div>
     </div>
 
+    <!-- Footer -->
+    <div class="footer">
+        © 2024 Avirbhav Fest | All rights reserved.
+    </div>
+
+    <script>
+        function toggleList(id) {
+            const list = document.getElementById(id);
+            list.style.display = list.style.display === 'none' || list.style.display === '' ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
