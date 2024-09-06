@@ -18,8 +18,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #000; /* Set background to black */
-            color: #fff; /* Default text color to white */
+            background-color: #000;
+            color: #fff;
         }
 
         /* Header */
@@ -33,7 +33,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-direction: column; /* Set column direction to stack logo and nav links */
+            flex-direction: column;
         }
 
         .container {
@@ -49,7 +49,7 @@
             display: flex;
             gap: 10px;
             order: 2;
-            margin-top: 10px; /* Add space between logo and navigation */
+            margin-top: 10px;
         }
 
         .nav-links {
@@ -93,7 +93,6 @@
             margin-bottom: 40px;
             color: #fff;
             font-weight: 700;
-            text-shadow: 0 0 10px #7D3C98; /* Glowing effect on the section title */
         }
 
         .event-category {
@@ -106,12 +105,11 @@
             color: #fff;
             font-weight: 600;
             text-align: center;
-            text-shadow: 0 0 10px #7D3C98;
         }
 
         .events-list {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Display two events per row */
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
 
@@ -121,12 +119,13 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
             position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
         }
 
         .event-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+            background-color: #333;
+            transform: translateY(-5px);
         }
 
         .event-header h3 {
@@ -134,32 +133,24 @@
             margin-bottom: 10px;
             color: #fff;
             transition: color 0.3s ease;
-            text-shadow: 0 0 5px #7D3C98;
-        }
-
-        .event-header h3:hover {
-            color: #7D3C98;
-            text-shadow: 0 0 20px #7D3C98, 0 0 30px #7D3C98; /* Glowing effect on hover */
         }
 
         .event-content p {
             font-size: 1em;
             color: #aaa;
+            transition: opacity 0.3s ease;
         }
 
-        .event-content p:hover {
-            color: #7D3C98; /* Glowing effect for paragraph text */
-            text-shadow: 0 0 10px #7D3C98, 0 0 15px #7D3C98; /* Glowing effect on hover */
-        }
-
-        .register-button {
+        .button-group {
             display: none;
             position: absolute;
             bottom: 20px;
             right: 20px;
+            gap: 10px;
+        }
+
+        .button-group a {
             padding: 10px 20px;
-            background-color: #7D3C98;
-            color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -168,13 +159,30 @@
             transition: background-color 0.3s ease;
         }
 
-        .register-button:hover {
+        .button-group .register-button {
+            background-color: #7D3C98;
+            color: #fff;
+        }
+
+        .button-group .register-button:hover {
             background-color: #6b2d77;
         }
 
-        .event-item:hover .register-button,
-        .event-item:focus-within .register-button {
-            display: block;
+        .button-group .details-button {
+            background-color: #444;
+            color: #fff;
+        }
+
+        .button-group .details-button:hover {
+            background-color: #333;
+        }
+
+        .event-item.active .button-group {
+            display: flex;
+        }
+
+        .event-item.active .event-content p {
+            opacity: 0;
         }
 
         /* Footer */
@@ -206,16 +214,32 @@
 
         .footer .social-media li a:hover {
             color: #7D3C98;
-            text-shadow: 0 0 15px #7D3C98;
         }
 
         /* Responsive Styling for Mobile View */
         @media (max-width: 768px) {
             .events-list {
                 display: flex;
-                flex-direction: column; /* Stacks each event item vertically */
+                flex-direction: column;
                 gap: 15px;
             }
+        }
+        .attractive-text {
+            font-size: 18px; /* Adjust the font size as needed */
+            font-weight: bold;
+            color: #2c3e50; /* Dark color for the text */
+            background-color: #3b3d3d; /* Light background color */
+            padding: 10px 20px; /* Space around the text */
+            border-radius: 5px; /* Rounded corners */
+            text-align: center; /* Center the text */
+            display: inline-block; /* Make the background fit the text */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+            transition: background-color 0.3s, color 0.3s; /* Smooth color transitions */
+        }
+
+        .attractive-text:hover {
+            background-color: #3498db; /* Change background color on hover */
+            color: #ffffff; /* Change text color on hover */
         }
     </style>
 </head>
@@ -241,184 +265,250 @@
         <div class="container">
             <h2 class="section-title">AVIRBHAV 2024 Events</h2>
 
+            <!-- Technical Events -->
+            <div class="event-category">
+                <h3 class="event-category-title">Tech Showdowns</h3>
+                <div class="events-list">
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Technical Quiz</h3>
+                        </div>
+                        <div class="event-content">
+                            <p> A competitive quiz testing participants' knowledge of technology, programming, history, and general awareness.</p>
+                             <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/RuYLwzLZ3cnhWdwj8" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/1B4M2eRFsjMYGJ5ky92l_jNDKAVRs85V6WYX3eLBcMWE/edit?usp=sharing" class="details-button" target="_blank">Details</a>
 
-           <!-- Technical Events -->
-           <div class="event-category">
-            <h3 class="event-category-title">Tech showdowns</h3>
-            <div class="events-list">
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>Techncial Quiz</h3>
+                        </div>
                     </div>
-                    <div class="event-content">
-                        <p> Consists of 3 members per team. </p>
-                        <p> Team members can be of different branches and semesters.</p>
-                        <p> Tech awareness, Programming, history, Tech GK etc., will be the topics</p>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Conquer the Code</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>A coding challenge where participants will solve given programming problems.</p>
+                            <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/ywDKaem92HsA4iXz9" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/1B4M2eRFsjMYGJ5ky92l_jNDKAVRs85V6WYX3eLBcMWE/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
                     </div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHA0DF1PNsVO8Ii1BTpKTvkDngWO_ugUat_5Edt7c33g_yyA/viewform?usp=sf_link" class="register-button">Register</a>
-                </div>
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3> Conquer the code: </h3>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Idea Infusion</h3>
+                        </div>
+                        <div class="event-content">
+                            <p> A platform for participants to present their innovative technological ideas.</p>
+                           <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/2hovX1so3q6TbduB6" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/1B4M2eRFsjMYGJ5ky92l_jNDKAVRs85V6WYX3eLBcMWE/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
                     </div>
-                    <div class="event-content">
-                        <p> Code debugging challenge, Outcome is to get the expected output. </p>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>App Critique</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>A competition where participants will analyze and provide feedback on a given app.</p>
+                           <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/BNvpdzC2NmY1bybx6" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/1B4M2eRFsjMYGJ5ky92l_jNDKAVRs85V6WYX3eLBcMWE/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
                     </div>
-                    <a href="https://forms.gle/Uj3N8MNAe92D5CUu8" class="register-button">Register</a>
-                </div>
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>Idea Infusion:</h3>
-                    </div>
-                    <div class="event-content">
-                        <p> Present your idea on given topic. </p>
-                        <p>something that is business possible, feasible and innovative</p>
-                    </div>
-                    <a href="https://forms.gle/FKxL74tdzCdGwgwd8" class="register-button">Register</a>
-                </div>
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>App Review</h3>
-                    </div>
-                    <div class="event-content">
-                        <p> An app will be given on the spot </p>
-                        <p> Five minutes will be give to study the app </p>
-                        <p>They have to raise points about the usage and features of the app.</p>
-                        <p> Compare it with existing one. Give suggestions to improve it </p>
-                    </div>
-                    <a href="https://forms.gle/ofJdRgogagVJBxs48" class="register-button">Register</a>
-                </div>
-               
-            </div>
-        </div>
-
-        <!-- Cultural Events -->
-        <div class="event-category">
-            <h3 class="event-category-title">Chill Zone</h3>
-            <div class="events-list">
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>Drawing/Sketching</h3>
-                    </div>
-                    <div class="event-content">
-                        <p> Draw or sketch based on the given theme or topic.</p>
-                    </div>
-                    <a href="https://forms.gle/gBAKHnStuddSifncA" class="register-button">Register</a>
-                </div>
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>Act Out Loud</h3>
-                    </div>
-                    <div class="event-content">
-                        <p>Team Size: 3 members</p>
-                         <p>  A fun event where the process will be explained on the spot.</p>
-                    </div>
-                    <a href="https://forms.gle/PuyXsEPXX3Sm1bri8" class="register-button">Register</a>
-                </div>
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>Visual Tale Contest </h3>
-                    </div>
-                    <div class="event-content">
-                        <p>Submit photos or videos on any theme (nature, culture, technology, daily life, etc.).  </p>
-                        <p>Showcase creativity and unique perspectives.  </p>
-                         <p>No specific technical requirements—focus on storytelling through visuals.</p>
-                    </div>
-                    <a href="https://forms.gle/UuTgqF84wWA1QfBu8" class="register-button">Register</a>
-                </div>
-                 <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>Motor Co-ordination</h3>
-                    </div>
-                    <div class="event-content">
-                        
-                    </div>
-                    <a href="https://forms.gle/zUH2yjiJQ7He6t1p6" class="register-button">Register</a>
+                    <!-- Add more technical events here -->
                 </div>
             </div>
-        </div>
 
-        <!-- Fun Events -->
-        <div class="event-category">
-            <h3 class="event-category-title">Games</h3>
-            <div class="events-list">
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>Pubg</h3>
+            <!-- Non-Technical Events -->
+            <div class="event-category">
+                <h3 class="event-category-title">Chill Zone</h3>
+                <div class="events-list">
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Art Attack</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>A creative competition where participants will draw or sketch based on a given theme.</p>
+                        <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/PmFYQRMc24GNyHth7" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/1ONvu04nB5GF-X5NEHzBEYptN4mToctCwgIXgX0hJ-II/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
                     </div>
-                    <div class="event-content">
-                        <p>Test your knowledge and win exciting prizes in our trivia quiz.</p>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Act out Loud</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>A fun event where participants will perform short, impromptu skits or acts.</p>
+                            <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/xBvxNDnwNmCmFNG69" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/1ONvu04nB5GF-X5NEHzBEYptN4mToctCwgIXgX0hJ-II/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
                     </div>
-                    <a href="https://forms.gle/ZLtPWyZQqiCYZb2J6" class="register-button">Register</a>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Visual Tales  Contest</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>A competition where participants will use photos or videos to tell a story.</p>
+                            <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/fKVaJMwyaeboNCuKA" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/1ONvu04nB5GF-X5NEHzBEYptN4mToctCwgIXgX0hJ-II/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
+                    </div>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Motor Co-Ordination</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>An interactive game that challenges your motor skills and reflexes.</p>
+                            <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/rCA1NnamfW9pvnRo9" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/1ONvu04nB5GF-X5NEHzBEYptN4mToctCwgIXgX0hJ-II/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more non-technical events here -->
                 </div>
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>free Fire</h3>
-                    </div>
-                    <div class="event-content">
-                        <p>Showcase your fashion sense and creativity on the runway.</p>
-                    </div>
-                    <a href="https://forms.gle/Zyi6xCQ7ZTR5fVKG6" class="register-button">Register</a>
-                </div>
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>Sudoko</h3>
-                    </div>
-                    <div class="event-content">
-                        <p>Enjoy a variety of delicious foods from different cuisines.</p>
-                    </div>
-                    <a href="https://forms.gle/pTX7VajkRaf3CcTQ6" class="register-button">Register</a>
-                </div>
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>Housie</h3>
-                    </div>
-                    <div class="event-content">
-                        <p>Enjoy a variety of delicious foods from different cuisines.</p>
-                    </div>
-                    <a href="https://forms.gle/RLRZvy6Wgb4zMRFK7" class="register-button">Register</a>
-                </div>
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>Ludo</h3>
-                    </div>
-                    <div class="event-content">
-                        <p>Enjoy a variety of delicious foods from different cuisines.</p>
-                    </div>
-                    <a href="https://forms.gle/kf2budz4PnWUoxBQ6" class="register-button">Register</a>
-                </div>
-                <div class="event-item" data-aos="fade-up">
-                    <div class="event-header">
-                        <h3>Chess</h3>
-                    </div>
-                    <div class="event-content">
-                        <p>Enjoy a variety of delicious foods from different cuisines.</p>
-                    </div>
-                    <a href="https://forms.gle/8fJ1rvBpaobcFPcW9" class="register-button">Register</a>
-                </div>
+
             </div>
-        </div>
+            <!-- <p>----------sports   </p> -->
+            <div class="event-category">
+                <h3 class="event-category-title">Game Zone</h3>
+                <div class="events-list">
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>BGMI</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>BGMI is a popular battle royale game that tests players' tactical skills and teamwork in an intense virtual environment.</p>
+                            <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/xCooB5bqKcYfUqkW8" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/1Fct93nSXhSDlV8j3AYXuk6fQk5H6z9qpjEoKOOWO-y8/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
+                    </div>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>FREE FIRE</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>Free Fire is an action-packed battle royale game where players strategize to survive and be the last one standing.</p>
+                            <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/oMAYQCEBCRcXYXwV6" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/1dqfhlB-miTxgumLKcponSlEWqemjztcMSIDl9hJOZCM/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
+                    </div>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Sudoko</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>Sudoku is a number puzzle game that sharpens logical thinking and problem-solving skills</p>
+                            <p class="attractive-text">Explore more and register, just touch</p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/MycLf2vdVhPZRWBZ6" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/18Z7wxxqXRNNEs8n0jBPy_F58d9IGEVbfMoZAvVlWmoU/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
+                    </div>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Housie</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>Housie is a fun and engaging game of chance that combines strategy and luck in a competitive setting</p>
+                            <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/4E8HTYaKLKAYsPRMA" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/18Z7wxxqXRNNEs8n0jBPy_F58d9IGEVbfMoZAvVlWmoU/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
+                    </div>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Ludo</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>Ludo is a traditional board game of luck and strategy, bringing players together in a race to the finish.</p>
+                        <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/Z3YJCA7jMrMUuo6S7" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/18Z7wxxqXRNNEs8n0jBPy_F58d9IGEVbfMoZAvVlWmoU/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
+                    </div>
+                    <div class="event-item" data-aos="fade-up">
+                        <div class="event-header">
+                            <h3>Chess</h3>
+                        </div>
+                        <div class="event-content">
+                            <p>Chess is a classic board game that challenges players’ strategic thinking and foresight in a battle of wits.</p>
+                            <p class="attractive-text">Explore more and register, just touch </p>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://forms.gle/c7NVqNNa8Zpgjtx27" class="register-button">Register</a>
+                            <a href="https://docs.google.com/document/d/18Z7wxxqXRNNEs8n0jBPy_F58d9IGEVbfMoZAvVlWmoU/edit?usp=sharing" class="details-button" target="_blank">Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more non-technical events here -->
+                </div>
 
-            <!-- Additional categories go here -->
+            </div>
+
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer class="footer">
-        <p>&copy; @ Avirbhav-2k24 | All Rights Reserved.</p>
         <ul class="social-media">
-            <li><a href="#" class="fab fa-facebook-f"></a></li>
-            <li><a href="#" class="fab fa-twitter"></a></li>
-            <li><a href="#" class="fab fa-instagram"></a></li>
-            <li><a href="#" class="fab fa-linkedin-in"></a></li>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
         </ul>
+        <p>&copy; 2024 AVIRBHAV. All rights reserved.</p>
     </footer>
 
-    <!-- AOS (Animate on Scroll) JavaScript -->
+    <!-- AOS (Animate on Scroll) JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
     <script>
-        AOS.init({
-            duration: 1200,
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
+
+            document.querySelectorAll('.event-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    // Close other active items
+                    document.querySelectorAll('.event-item.active').forEach(activeItem => {
+                        if (activeItem !== item) {
+                            activeItem.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle active class on the clicked item
+                    item.classList.toggle('active');
+                });
+            });
         });
     </script>
 </body>
