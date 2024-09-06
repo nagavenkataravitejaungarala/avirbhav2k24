@@ -52,11 +52,12 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Align nav items in a row */
+    display: flex; /* Ensure nav items remain in a row */
+    gap: 15px; /* Adjust spacing between nav items */
 }
 
 .nav-links li {
-    margin: 0 15px; /* Adjust margin for spacing */
+    margin: 0; /* Reset margin */
 }
 
 .nav-links a {
@@ -67,7 +68,7 @@ body {
     letter-spacing: 0.5px;
     transition: color 0.3s, box-shadow 0.3s;
     position: relative;
-    padding: 10px; /* Added padding to prevent text cut-off */
+    padding: 10px 15px; /* Adjust padding for better touch targets */
 }
 
 .nav-links a:hover,
@@ -332,28 +333,13 @@ body {
 
 .footer p {
     margin: 0;
+    font-size: 0.9em;
+    color: #e0e0e0;
 }
 
-.social-media {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-}
-
-.social-media li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.social-media a {
-    color: #66fcf1;
-    font-size: 1.5em;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-media a:hover {
+.footer a {
     color: #00bfa5;
+    text-decoration: none;
 }
 
 /* Responsive adjustments */
@@ -362,44 +348,21 @@ body {
         max-width: 80%; /* Adjust size for mobile view */
     }
 
-    .hero-content h1 {
-        display: none; /* Hide the h1 if present */
-    }
-
     .hero-content p {
         font-size: 1em; /* Adjust font size for mobile */
     }
 
-    .logo img {
-        max-height: 40px; /* Reduce logo size for mobile */
-    }
-
     .navbar {
-        flex-direction: column; /* Stack navigation items vertically */
+        flex-direction: row; /* Ensure navigation items remain side by side */
     }
 
     .nav-links {
-        flex-direction: column;
-        gap: 10px; /* Adjust spacing between nav items */
+        flex-direction: row; /* Keep nav links horizontal */
+        gap: 10px; /* Adjust spacing for better appearance */
     }
 
     .nav-links a {
-        font-size: 1.2em; /* Increase font size for mobile */
-        padding: 10px 15px; /* Increase padding for better touch targets */
+        font-size: 1.1em; /* Slightly increase font size for readability */
+        padding: 10px; /* Keep consistent padding */
     }
-}
-
-/* AIML Dept Text */
-#aiml-dept-text {
-    font-size: 0.6em; /* Reduced size */
-    color: #66fcf1;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-    transition: box-shadow 0.3s, color 0.3s;
-}
-
-#aiml-dept-text:hover {
-    color: #00bfa5;
-    box-shadow: 0 0 15px rgba(0, 191, 165, 0.8); /* Glowing effect */
 }
