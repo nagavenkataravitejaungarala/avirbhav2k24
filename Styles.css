@@ -18,6 +18,16 @@ body {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center; /* Center header content */
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center;
+    margin: 0;
 }
 
 .logo img {
@@ -57,6 +67,7 @@ body {
     letter-spacing: 0.5px;
     transition: color 0.3s, box-shadow 0.3s;
     position: relative;
+    padding: 10px; /* Added padding to prevent text cut-off */
 }
 
 .nav-links a:hover,
@@ -268,7 +279,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .team-member {
@@ -279,6 +289,7 @@ body {
     text-align: center;
     max-width: 300px;
 }
+
 .team-member:hover {
     box-shadow: 0 0 15px rgba(0, 191, 165, 0.8);
 }
@@ -362,10 +373,25 @@ body {
     .logo img {
         max-height: 40px; /* Reduce logo size for mobile */
     }
+
+    .navbar {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px; /* Adjust spacing between nav items */
+    }
+
+    .nav-links a {
+        font-size: 1.2em; /* Increase font size for mobile */
+        padding: 10px 15px; /* Increase padding for better touch targets */
+    }
 }
+
 /* AIML Dept Text */
 #aiml-dept-text {
-    font-size: 1.5em;
+    font-size: 0.6em; /* Reduced size */
     color: #66fcf1;
     font-weight: bold;
     text-align: center;
