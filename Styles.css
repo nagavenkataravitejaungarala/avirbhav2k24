@@ -168,41 +168,35 @@ body {
 }
 
 .hero-content p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin: 20px 0;
-    color: #e0e0e0;
-    transition: box-shadow 0.3s;
+    font-weight: 600;
 }
 
-.hero-content p:hover,
-.hero-content p:focus {
-    box-shadow: 0 0 10px rgba(0, 191, 165, 0.6); /* Glowing effect */
+.hero-buttons {
+    margin-top: 20px;
 }
 
 .hero-buttons .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #ffffff;
     background-color: #00bfa5;
-    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 600;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.hero-buttons .btn:hover,
-.hero-buttons .btn:focus {
-    background-color: #009e92;
-    box-shadow: 0 0 10px rgba(0, 191, 165, 0.6); /* Glowing effect */
+.hero-buttons .btn:hover {
+    background-color: #00a58e;
+    box-shadow: 0 0 10px rgba(0, 191, 165, 0.8);
 }
 
 /* About Section */
 .about-section {
     padding: 60px 20px;
     text-align: center;
-    background: #1f1f1f;
 }
 
 .about-section h2 {
@@ -218,41 +212,9 @@ body {
 }
 
 .about-section p {
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.6;
     color: #e0e0e0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Registration Section */
-.registration-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.registration-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #66fcf1;
-    transition: box-shadow 0.3s;
-}
-
-.registration-section h2:hover,
-.registration-section h2:focus {
-    box-shadow: 0 0 10px rgba(0, 191, 165, 0.6); /* Glowing effect */
-}
-
-.registration-info p {
-    font-size: 1.1em;
-    color: #e0e0e0;
-}
-
-.qr-code {
-    margin-top: 20px;
-    max-width: 200px;
-    border: 2px solid #00bfa5;
-    border-radius: 10px;
 }
 
 /* Team Section */
@@ -266,7 +228,6 @@ body {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #66fcf1;
-    text-align: center;
     transition: box-shadow 0.3s;
 }
 
@@ -289,10 +250,9 @@ body {
     margin: 10px;
     text-align: center;
     max-width: 300px;
-}
-
-.team-member:hover {
-    box-shadow: 0 0 15px rgba(0, 191, 165, 0.8);
+    min-width: 250px; /* Ensure minimum width for consistency */
+    flex: 1 1 300px; /* Allow flex items to grow and shrink as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Consistent shadow effect */
 }
 
 .team-member img {
@@ -326,57 +286,28 @@ body {
 /* Footer */
 .footer {
     background: #1f1f1f;
-    color: #e0e0e0;
-    padding: 20px;
+    color: #ffffff;
     text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
 }
 
 .footer p {
     margin: 0;
-    font-size: 0.9em;
-    color: #e0e0e0;
 }
 
-.footer a {
-    color: #00bfa5;
-    text-decoration: none;
-}
-
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .hero-content img#header-title {
-        max-width: 80%; /* Adjust size for mobile view */
+    .team-member {
+        flex: 1 1 100%; /* Full width on small screens */
     }
 
     .hero-content p {
-        font-size: 1em; /* Adjust font size for mobile */
+        font-size: 1.2em;
     }
 
-    .navbar {
-        flex-direction: row; /* Ensure navigation items remain side by side */
+    .hero-buttons .btn {
+        font-size: 0.9em;
+        padding: 8px 15px;
     }
-
-    .nav-links {
-        flex-direction: row; /* Keep nav links horizontal */
-        gap: 10px; /* Adjust spacing for better appearance */
-    }
-
-    .nav-links a {
-        font-size: 1.1em; /* Slightly increase font size for readability */
-        padding: 10px; /* Keep consistent padding */
-    }
-}
-/* AIML Dept Text */
-#aiml-dept-text {
-    font-size: 0.6em; /* Reduced size */
-    color: #66fcf1;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-    transition: box-shadow 0.3s, color 0.3s;
-}
-
-#aiml-dept-text:hover {
-    color: #00bfa5;
-    box-shadow: 0 0 15px rgba(0, 191, 165, 0.8); /* Glowing effect */
 }
