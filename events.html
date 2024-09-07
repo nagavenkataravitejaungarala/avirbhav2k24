@@ -113,33 +113,43 @@
             gap: 20px;
         }
 
-        .event-item {
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-            cursor: pointer;
-        }
+    .event-item 
+    {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
 
-        .event-item:hover {
-            background-color: #333;
-            transform: translateY(-5px);
-        }
+.event-item:hover {
+    background-color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(125, 60, 152, 0.5); /* Soft glow effect */
+}
 
-        .event-header h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #fff;
-            transition: color 0.3s ease;
-        }
+.event-header h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
 
-        .event-content p {
-            font-size: 1em;
-            color: #aaa;
-            transition: opacity 0.3s ease;
-        }
+.event-item:hover .event-header h3 {
+    color: #7D3C98; /* Highlight title color on hover */
+}
+
+.event-content p {
+    font-size: 1em;
+    color: #aaa;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.event-item:hover .event-content p {
+    color: #fff; /* Change text color on hover */
+}
 
         .button-group {
             display: none;
@@ -229,7 +239,7 @@
             font-weight: bold;
             color: #2c3e50; /* Dark color for the text */
             background-color: #3b3d3d; /* Light background color */
-            padding: 8px 18px; /* Space around the text */
+            padding: 10px 20px; /* Space around the text */
             border-radius: 4px; /* Rounded corners */
             text-align: center; /* Center the text */
             display: inline-block; /* Make the background fit the text */
@@ -241,6 +251,36 @@
             background-color: #3498db; /* Change background color on hover */
             color: #ffffff; /* Change text color on hover */
         }
+        /* Enhance the section titles with gradient effect */
+.section-title, .event-category-title {
+    background: linear-gradient(45deg, #7D3C98, #3498db);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Add hover scale effect for event items */
+.event-item:hover {
+    transform: scale(1.05);
+    background-color: #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .event-item {
+        padding: 15px;
+    }
+    .event-header h3 {
+        font-size: 1.2em;
+    }
+    .event-content p {
+        font-size: 0.9em;
+    }
+    .button-group a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -350,7 +390,7 @@
                         <div class="event-content">
                             <p>A fun event where participants will perform short, impromptu skits or acts.</p>
                             <p class="attractive-text">Explore more and Register ! </p>
-                        </div>
+                            </div>
                         <div class="button-group">
                             <a href="https://forms.gle/xBvxNDnwNmCmFNG69" class="register-button">Register</a>
                             <a href="https://docs.google.com/document/d/1ONvu04nB5GF-X5NEHzBEYptN4mToctCwgIXgX0hJ-II/edit?usp=sharing" class="details-button" target="_blank">Details</a>
