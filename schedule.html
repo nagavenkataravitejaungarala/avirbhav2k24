@@ -12,100 +12,149 @@
     <!-- AOS (Animate on Scroll) CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-            margin: 0;
-            padding: 0;
-        }
+ /* Global Styles */
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
 
-        .header {
-            background-color: #111;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-direction: column;
-        }
+/* Header Styling */
+.header {
+    background-color: #111;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
-        .container {
-            width: 85%;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-direction: column;
-        }
+/* Container for Header Elements */
+.container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
 
-        .navbar {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
+/* Navigation Bar Styling */
+.navbar {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
 
-        .nav-links {
-            list-style-type: none;
-            display: flex;
-            gap: 20px;
-            margin: 0;
-            padding: 0;
-        }
+/* Navigation Links */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
 
-        .nav-links li a {
-            text-decoration: none;
-            font-weight: 600;
-            color: #fff;
-            transition: color 0.3s ease;
-        }
+.nav-links li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+    transition: color 0.3s ease;
+}
 
-        .nav-links li a:hover {
-            color: #7D3C98;
-        }
+.nav-links li a:hover {
+    color: #7D3C98;
+}
 
-        .logo img {
-            max-height: 50px;
-        }
+/* Logo Styling */
+.logo img {
+    max-height: 50px;
+}
 
-        .schedule-page {
-            padding: 20px;
-            text-align: center;
-        }
+/* Main Page Styling */
+.schedule-page {
+    padding: 20px;
+    text-align: center;
+}
 
-        h1 {
-            color: #ffffff;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px #00adb5, 0 0 20px #00adb5;
-        }
+/* Heading Styling */
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00adb5, 0 0 20px #00adb5;
+}
 
-        .schedule-table {
-            width: 90%;
-            margin: 0 auto;
-            border-collapse: collapse;
-            background-color: #1e1e1e;
-            color: #e0e0e0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
+/* Table Container for Responsiveness */
+.table-container {
+    overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+    margin: 0 auto;
+    padding: 0 10px; /* Adds slight padding on smaller devices */
+}
 
-        .schedule-table th,
-        .schedule-table td {
-            border: 1px solid #333;
-            padding: 12px 20px;
-            text-align: center;
-        }
+/* Table Styling */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+}
 
-        .schedule-table th {
-            background-color: #333;
-            color: #ffcc00;
-            font-weight: 700;
-        }
+/* Table Headers and Cells */
+.schedule-table th,
+.schedule-table td {
+    border: 1px solid #333;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
 
-        .schedule-table tr:hover {
-            background-color: #2a2a2a;
-        }
+/* Table Headers */
+.schedule-table th {
+    background-color: #333;
+    color: #ffcc00;
+    font-weight: 700;
+}
+
+/* Hover Effect on Table Rows */
+.schedule-table tr:hover {
+    background-color: #2a2a2a;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #111;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+/* Footer Text */
+.footer p {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .schedule-table th,
+    .schedule-table td {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+
+    .schedule-page {
+        padding: 15px;
+    }
+}
+
 
         .footer {
             background-color: #111;
