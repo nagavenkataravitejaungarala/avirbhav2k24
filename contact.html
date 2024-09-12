@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIRBHAV 2024 Events</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #000; /* Set background to black */
+            color: #fff; /* Default text color to white */
+        }
+
+             /* Header */
+             .header {
+            background-color: #111;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 10px;
+            order: 2;
+            margin-top: 10px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #7D3C98;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            order: 1;
+        }
+
+        .logo img {
+            max-height: 50px;
+        }
+
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .coordinator-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .sub-category {
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 280px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .sub-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px 5px rgba(123, 58, 183, 0.6); /* Glowing effect */
+        }
+
+        .sub-category:active {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px 10px rgba(123, 58, 183, 0.8); /* Glowing effect on touch */
+        }
+
+        .sub-category h2 {
+            font-size: 1.5rem;
+            color: #1abc9c;
+            margin: 0 0 10px;
+        }
+
+        .coordinator-list {
+            display: none; /* Initially hidden */
+            padding: 10px 0;
+        }
+
+        .coordinator-list p {
+            font-size: 1rem;
+            color: #fff;
+            margin: 5px 0;
+        }
+
+        .coordinator-list span {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .sub-category {
+                width: 90%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="aiml_logo.png" alt="College Logo">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="winners.html">Winners</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Heading -->
+    <h1>Student Coordinators</h1>
+
+    <!-- Main Coordinator Section -->
+    <div class="container coordinator-section">
+        <!-- Main Coordinator -->
+        <div class="sub-category" onclick="toggleList('main-coordinator-list')">
+            <h2>Event Organizers</h2>
+            <div id="main-coordinator-list" class="coordinator-list">
+                <p> U.N.V.RAVI TEJA <br><span>Phone: +91 7013666788</span></p>
+                <p> G.KARTHIK BHASKAR <br><span>Phone: +91 8099963336</span></p>
+                <p> K.BHANU TEJA <br><span>Phone: +91 9502647676</span></p>
+                <p>L.MEGHA SYAM <br><span>Phone: +91 9573304843</span></p>
+                <p>KUMAR RUDRA <br><span>Phone: +91 9063360596</span></p>
+                <p> KOUSHIK <br><span>Phone: +91 XXXXXXXXXX</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coordinator Sections -->
+    <div class="container coordinator-section">
+        <!-- Sub-category 1 -->
+        <div class="sub-category" onclick="toggleList('list1')">
+            <h2>Tech Showdowns</h2>
+            <div id="list1" class="coordinator-list">
+                <p> V.P.PRANEETH <br><span>Phone:+91 8328571819</span></p>
+                <p> K.NEERAJA <br><span>Phone: +91 8106990656</span></p>
+                <p> M.JYOTHI<br><span>Phone: +91 9381131378</span></p>
+                <p> LIKITH <br><span>Phone: +91 7893789031</span></p>
+            </div>
+        </div>
+
+        <!-- Sub-category 2 -->
+        <div class="sub-category" onclick="toggleList('list2')">
+            <h2>Chill Zone</h2>
+            <div id="list2" class="coordinator-list">
+                <p> DURGA PRASAD <br><span>Phone: +91 9553950479</span></p>
+                <p> P.VINAY <br><span>Phone: +91 9642324495</span></p>
+                <p> B.CHANDRIKA <br><span>Phone: +91 7680966610</span></p>
+                <p> RAKESH <br><span>Phone: +123 456 7890</span></p>
+                <p> K.JHANAVI <br><span>Phone: +91 9347981850</span></p>
+            </div>
+        </div>
+
+        <!-- Sub-category 3 -->
+        <div class="sub-category" onclick="toggleList('list3')">
+            <h2>Game Zone</h2>
+            <div id="list3" class="coordinator-list">
+                <p> E.JEJI ANIL  <br><span>Phone: +91 9642324495</span></p>
+                <p> K.VAMSI <br><span>Phone: +91 9849277879</span></p>
+                <p> B.VIJAYA<br><span>Phone: +91 7036348948</span></p>
+                <p> PRASAD <br><span>Phone: +91 7981017915</span></p>
+                <p> MALLI KARJUN <br><span>Phone: +91 9666453219</span></p>
+                <p> K.C.V.GOPI KRISHNA <br><span>Phone: +91 9392796088</span></p>
+            </div>
+        </div>
+
+        <!-- Sub-category 4 -->
+        <div class="sub-category" onclick="toggleList('list4')">
+            <h2>Cultural Coordinators</h2>
+            <div id="list4" class="coordinator-list">
+                <p>Shanmukh Sai<br><span>Phone: +91 7207435349</span></p>
+                <p> V.S.C.YESAWINI<br><span>Phone: +91 7989193698</span></p>
+                <p> M.S.R.CHANDRIKA <br><span>Phone: +91 9642416755</span></p>
+                <p> A.HEMANTH <br><span>Phone: +91 9032837064</span></p>
+                <p> K.SWARNA<br><span>Phone: +91 7207448350</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2024 Avirbhav Fest | All rights reserved.
+    </div>
+
+    <script>
+        let currentlyOpen = null;
+
+        function toggleList(id) {
+            const list = document.getElementById(id);
+
+            // Close the currently open box if it's not the one being clicked
+            if (currentlyOpen && currentlyOpen !== list) {
+                currentlyOpen.style.display = 'none';
+            }
+
+            // Toggle the clicked box
+            list.style.display = list.style.display === 'none' || list.style.display === '' ? 'block' : 'none';
+
+            // Update the currently open box
+            currentlyOpen = list.style.display === 'block' ? list : null;
+        }
+    </script>
+</body>
+</html>

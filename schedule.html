@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avirbhav TechFest 2024 - Event Schedule</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+     /* Header */
+     .header {
+            background-color: #111;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 10px;
+            order: 2;
+            margin-top: 10px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #7D3C98;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            order: 1;
+        }
+
+        .logo img {
+            max-height: 50px;
+        }
+
+        /* Main Page Styling */
+        .schedule-page {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Heading Styling */
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 173, 181, 0.5), 0 0 20px rgba(0, 173, 181, 0.5);
+            font-size: 2em;
+            border-bottom: 2px solid #00adb5;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Table Container for Responsiveness */
+        .table-container {
+            overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+            margin: 0 auto;
+            padding: 0 10px; /* Adds slight padding on smaller devices */
+        }
+
+        /* Table Styling */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Table Headers and Cells */
+        .schedule-table th,
+        .schedule-table td {
+            border: 1px solid #333;
+            padding: 12px 8px;
+            text-align: center;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            word-break: break-word; /* Breaks long words to prevent overflow */
+        }
+
+        /* Table Headers */
+        .schedule-table th {
+            background-color: #333;
+            color: #ffcc00;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hover Effect on Table Rows */
+        .schedule-table tr:hover {
+            background-color: #2a2a2a;
+            transform: scale(1.01);
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+        }
+
+        /* Register Button Styling */
+        .register-button {
+            background-color: #ff6600; /* Orangish color */
+            color: #121212;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .register-button:hover {
+            background-color: #cc5200; /* Darker orangish color */
+            color: #fff;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #111;
+            padding: 20px 10px;
+            color: #fff;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        /* Footer Text */
+        .footer p {
+            margin: 10px 0 0;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .schedule-table th,
+            .schedule-table td {
+                padding: 10px;
+                font-size: 0.8em;
+            }
+
+            .schedule-page {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .register-button {
+                padding: 6px 10px;
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .register-button {
+                padding: 5px 8px;
+                font-size: 0.7em;
+            }
+
+            .header {
+                padding: 10px;
+            }
+
+            .logo img {
+                max-height: 40px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="aiml_logo.png" alt="College Logo">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="winners.html">Winners</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="schedule-page">
+        <h1>Avirbhav TechFest 10th September Schedule of Events</h1>
+        <div class="table-container">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Venue</th>
+                        <th>Timing</th>
+                        <th>Category</th>
+                        <th>Register</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Technical Quiz</td>
+                        <td>AIML Block Lab-5</td>
+                        <td>9:30 AM</td>
+                        <td>Tech Showdowns</td>
+                        <td><a href="https://forms.gle/uMHjNW843nkS64hSA" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                    <tr>
+                        <td>Art Attack</td>
+                        <td>AIML Block</td>
+                        <td>10:00 AM</td>
+                        <td>Chill Zone</td>
+                        <td><a href="https://forms.gle/VS7z1iYBuTXqxpHCA" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                    <tr>
+                        <td>Idea Infusion</td>
+                        <td>AIML Block Lab1</td>
+                        <td>11:00 AM</td>
+                        <td>Tech Showdowns</td>
+                        <td><a href="https://forms.gle/zyNnp624kBWC7cE26" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chess</td>
+                        <td>AIML Block Seminar Hall</td>
+                        <td>1:30 PM</td>
+                        <td>Game Zone</td>
+                        <td><a href="https://forms.gle/JFkMW9dB85gCb1zW6" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                    <tr>
+                        <td>Sudoku</td>
+                        <td>AIML Block Seminar Hall</td>
+                        <td>2:00 PM</td>
+                        <td>Game Zone</td>
+                        <td><a href="https://forms.gle/Dsuf8vpHkqiEgC4J9" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                    <tr>
+                        <td>App Critique</td>
+                        <td>AIML Block Lab1</td>
+                        <td>2:30 PM</td>
+                        <td>Tech Showdowns</td>
+                        <td><a href="https://forms.gle/PErxN3z1siY4Qt3H7" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h1>Avirbhav TechFest 11th September Schedule of Events</h1>
+        <div class="table-container">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Event</th>
+                        <th>Venue</th>
+                        <th>Timing</th>
+                        <th>Category</th>
+                        <th>Register</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Technical Quiz</td>
+                        <td></td>
+                        <td></td>
+                        <td>Tech Showdowns</td>
+                        <td><a href="https://forms.gle/uMHjNW843nkS64hSA" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                    <tr>
+                        <td>Art Attack</td>
+                        <td>AIML Block</td>
+                        <td>10:00 AM</td>
+                        <td>Chill Zone</td>
+                        <td><a href="https://forms.gle/VS7z1iYBuTXqxpHCA" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                    <tr>
+                        <td>Idea Infusion</td>
+                        <td>AIML Block Lab1</td>
+                        <td>11:00 AM</td>
+                        <td>Tech Showdowns</td>
+                        <td><a href="https://forms.gle/zyNnp624kBWC7cE26" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                    <tr>
+                        <td>Chess</td>
+                        <td>AIML Block Seminar Hall</td>
+                        <td>1:30 PM</td>
+                        <td>Game Zone</td>
+                        <td><a href="https://forms.gle/JFkMW9dB85gCb1zW6" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                    <tr>
+                        <td>Sudoku</td>
+                        <td>AIML Block Seminar Hall</td>
+                        <td>2:00 PM</td>
+                        <td>Game Zone</td>
+                        <td><a href="https://forms.gle/Dsuf8vpHkqiEgC4J9" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                    <tr>
+                        <td>App Critique</td>
+                        <td>AIML Block Lab1</td>
+                        <td>2:30 PM</td>
+                        <td>Tech Showdowns</td>
+                        <td><a href="https://forms.gle/PErxN3z1siY4Qt3H7" class="register-button" target="_blank">Register</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Avirbhav 2k24. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

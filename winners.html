@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avirbhav 2024 - Winners and Runners-Up</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+     /* Header */
+     .header {
+            background-color: #111;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 10px;
+            order: 2;
+            margin-top: 10px;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #7D3C98;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            order: 1;
+        }
+
+        .logo img {
+            max-height: 50px;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffcc00;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(0, 173, 181, 0.5), 0 0 20px rgba(0, 173, 181, 0.5);
+            font-size: 2.5em;
+            border-bottom: 2px solid #00adb5;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Category Section Styling */
+        .category-section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .category-title {
+            font-size: 2em;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .category-title::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            width: 60px;
+            height: 3px;
+            background-color: #00adb5;
+            transform: translateX(-50%);
+        }
+
+        /* Grid Layout for Winner Cards */
+        .winner-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        /* Winner Card Styling */
+        .winner-card {
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            border-left: 5px solid #00adb5;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .winner-card:hover {
+            transform: scale(1.05);
+            background-color: #333;
+        }
+
+        .winner-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .winner-details {
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        .winner-details strong {
+            color: #00adb5;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #111;
+            padding: 20px 0;
+            color: #fff;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        .footer p {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .winner-card {
+                padding: 15px;
+            }
+
+            .winner-title {
+                font-size: 1.3em;
+            }
+
+            .winner-details {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="aiml_logo.png" alt="College Logo">
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <h1>Winners and Runners-Up</h1>
+
+        <!-- Technical Category -->
+        <section class="category-section">
+            <h2 class="category-title">Technical Shadowdowns</h2>
+            <div class="winner-grid">
+                <div class="winner-card">
+                    <h2 class="winner-title">Technical Quiz</h2>
+                    <p class="winner-details"><strong>Winner:</strong> Team 7(3rd Year Aiml-B)</p>
+                    <p class="winner-details"><strong>Runner-Up:</strong>SAI YUG(3rd Year -CSE)</p>
+                </div>
+
+                <div class="winner-card">
+                    <h2 class="winner-title">Conquer the Code</h2>
+                    <p class="winner-details"><strong>Winner:</strong>Ravi Kiran</p>
+                    <p class="winner-details"><strong>Runner-Up:</strong> Pranavi Karumuri</p>
+                </div>
+
+                <div class="winner-card">
+                    <h2 class="winner-title">App Critique</h2>
+                    <p class="winner-details"><strong>Winner:</strong>Poornima Harshini(3rd Year Aiml-B)</p>
+                    <p class="winner-details"><strong>Runner-Up:</strong>G.Avinash(2nd Year Aiml-A)</p>
+                </div>
+
+                <div class="winner-card">
+                    <h2 class="winner-title">Idea Infusion</h2>
+                    <p class="winner-details"><strong>Winner:</strong>Panja Venkata Ramya(3rd Year Aiml-B)</p>
+                    <p class="winner-details"><strong>Runner-Up:</strong>B.Hindu(2nd Year csds-A)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Non-Technical Category -->
+        <section class="category-section">
+            <h2 class="category-title">Chill Zone</h2>
+            <div class="winner-grid">
+                <div class="winner-card">
+                    <h2 class="winner-title">Art Attack</h2>
+                    <p class="winner-details"><strong>Winner:</strong>D.Siddardha(Siet-EEE)</p>
+                    <p class="winner-details"><strong>Runner-Up:</strong>Tirumani Tulasi(3rd Year AIDS)</p>
+                </div>
+
+                <div class="winner-card">
+                    <h2 class="winner-title">Act On Loud</h2>
+                    <p class="winner-details"><strong>Winner:</strong>HRS Team</p>
+                    
+                </div>
+
+                <div class="winner-card">
+                    <h2 class="winner-title">Motor Co-Ordination</h2>
+                    <p class="winner-details"><strong>Winner:</strong>K.Hanusri</p>
+                    <p class="winner-details"><strong>Runner-Up:</strong>Murahi Teja</p>
+                </div>
+
+                <div class="winner-card">
+                    <h2 class="winner-title">Visual Tales</h2>
+                    <p class="winner-details"><strong>Winner:</strong>Ayyappa(2nd Year csds-A)</p>
+                    <p class="winner-details"><strong>Runner-Up:</strong>Siva (4th Year Ece-D)</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Games Category -->
+        <section class="category-section">
+            <h2 class="category-title">Games</h2>
+            
+            <!-- Online Games Sub-Section -->
+            <section class="category-section">
+                <h2 class="category-title">Online Games</h2>
+                <div class="winner-grid">
+                    <div class="winner-card">
+                        <h2 class="winner-title">Free-Fire Tournament</h2>
+                        <p class="winner-details"><strong>Winner:</strong>Team Tharun(3ed Year CSE)</p>
+                        <p class="winner-details"><strong>Runner-Up:</strong>Team CSE-DS (3rd Year)</p>
+                    </div>
+                </div>
+                <div class="winner-grid">
+                    <div class="winner-card">
+                        <h2 class="winner-title">Ludo</h2>
+                        <p class="winner-details"><strong>Winner:</strong>B.Yaswanth(2nd Yaer CSeds-A)</p>
+                        <p class="winner-details"><strong>Runner-Up:</strong>P.Sowmya(2nd Year CSDS=B)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Offline Games Sub-Section -->
+            <section class="category-section">
+                <h2 class="category-title">Offline Games</h2>
+                <div class="winner-grid">
+                    <div class="winner-card">
+                        <h2 class="winner-title">Chess</h2>
+                        <p class="winner-details"><strong>Winner:</strong>Pardha Saradhi(Robotics)</p>
+                        <p class="winner-details"><strong>Runner-Up:</strong>Vagesh(AIML)</p>
+                    </div>
+
+                    <div class="winner-card">
+                        <h2 class="winner-title">Sudoku</h2>
+                        <p class="winner-details"><strong>Winner:</strong>M.N.S. Ganesh(4th Year ECE-C)</p>
+                       
+                    </div>
+
+                    <div class="winner-card">
+                        <h2 class="winner-title">Housie</h2>
+                        <p class="winner-details"><strong>Jaldi-Five:</strong>Neelima(2nd Year IT)</p>
+                        <p class="winner-details"><strong>First-Line:</strong>P.Reshma(2nd Year Aiml-B)</p>
+                        <p class="winner-details"><strong>Second-Line</strong>M.Satyanarayana(3rd Year CSEDS)</p>
+                        <p class="winner-details"><strong>Third-Line:</strong> K.Renuka(2nd Year Aiml-A)</p>
+                        <p class="winner-details"><strong>Third-Line</strong>A.Bhavya(2nd Year Aiml-A)</p>
+                        <p class="winner-details"><strong>Full Housie:</strong>T.Anusha(Siet Cse-B 4th Year)</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Lucky Dip Section -->
+        <section class="category-section">
+            <h2 class="category-title">Lucky Dip</h2>
+            <div class="winner-grid">
+                <div class="winner-card">
+                    <h2 class="winner-title">Lucky Draw</h2>
+                    <p class="winner-details"><strong>Fisrt Prize</strong>Update soon</p>
+                    <p class="winner-details"><strong>Second Prize</strong>Udpate soon</p>
+                    <p class="winner-details"><strong>Third Prize</strong>Udpate soon</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Treasure Hunt Section -->
+        <section class="category-section">
+            <h2 class="category-title">Treasure Hunt</h2>
+            <div class="winner-grid">
+                <div class="winner-card">
+                    <h2 class="winner-title">Treasure Hunt</h2>
+                    <p class="winner-details"><strong>Winner:</strong>Update soon</p>
+                    <p class="winner-details"><strong>Runner-Up:</strong>Update Soon</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Avirbhav. All rights reserved.</p>
+    </footer>
+</body>
+</html>
